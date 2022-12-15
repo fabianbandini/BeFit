@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BeFIt.MainPage"
+             Shell.NavBarIsVisible="false">
+
+    <ScrollView BackgroundColor="#FFFEFA">
+        <StackLayout Margin="40">
+        <Slider VerticalOptions="Center" />
+
+        <Label Text="Test" FontSize="21"
+               />
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
