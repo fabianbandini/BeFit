@@ -4,13 +4,35 @@
              x:Class="BeFIt.MainPage"
              Shell.NavBarIsVisible="false">
 
-    <ScrollView BackgroundColor="#FFFEFA">
-        <StackLayout Margin="40">
-        <Slider VerticalOptions="Center" />
+    <ContentView BackgroundColor="#FFFEFA">
+        <StackLayout Margin="20, 40, 20, 0">
+            <FlexLayout FlowDirection="LeftToRight" JustifyContent="SpaceBetween" AlignItems="Center">
+                <Button WidthRequest="50" HeightRequest="50" BackgroundColor="#DCDCDC" />
+                
+                <Button WidthRequest="65" HeightRequest="65" BackgroundColor="#DCDCDC" CornerRadius="50"/>
+            </FlexLayout>
 
-        <Label Text="Test" FontSize="21"
-               />
+            <FlexLayout Direction="Column" HeightRequest="80" Margin="0,50,0,0" >
+                <Label Text="Hello Fabian," FontSize="35" TextColor="#333" FontFamily="Tahoma"/>
+                <Label Text="Ready for a challange?" FontSize="15" TextColor="#474747" FontFamily="Poppins" Margin="0, 2, 0, 0
+                      "/>
+
+            </FlexLayout>
+
+            <Border StrokeShape="RoundRectangle 10" BackgroundColor="#333" Margin="0,20,0,0">
+                <FlexLayout HeightRequest="80" Direction="Row" JustifyContent="SpaceBetween" BackgroundColor="#333" Margin="0,0,0,0" AlignItems="Center">
+
+                    <StackLayout WidthRequest="200" HeightRequest="80" Margin="8,10,0,0" >
+                        <Label Text="New Challange" TextColor="White" FontSize="18" FontFamily="Poppins"/>
+                        <Label Text="4000 Steps" TextColor="White" FontSize="14"/>
+                    </StackLayout>
+
+                    <Image Source="play.png" HeightRequest="35" SemanticProperties.Description="Test" Margin="0,0,10,0"/>
+                </FlexLayout>
+            </Border>
+            
+            
         </StackLayout>
-    </ScrollView>
+    </ContentView>
 
 </ContentPage>
