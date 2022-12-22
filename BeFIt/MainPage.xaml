@@ -9,10 +9,10 @@
             <FlexLayout FlowDirection="LeftToRight" JustifyContent="SpaceBetween" AlignItems="Center">
                 <Button WidthRequest="50" HeightRequest="50" BackgroundColor="#DCDCDC" />
 
-                <Button WidthRequest="65" HeightRequest="65" BackgroundColor="#DCDCDC" CornerRadius="50"/>
-                </FlexLayout>
+                <Button WidthRequest="65" HeightRequest="65" BackgroundColor="#DCDCDC" CornerRadius="50" Clicked="OnCounterClicked"/>
+            </FlexLayout>
 
-                <FlexLayout Direction="Column" HeightRequest="80" Margin="0,50,0,0" >
+            <FlexLayout Direction="Column" HeightRequest="80" Margin="0,50,0,0" >
                 <Label Text="Hello Fabian," FontSize="35" TextColor="#333" FontFamily="Tahoma"/>
                 <Label Text="Ready for a challange?" FontSize="15" TextColor="#474747" FontFamily="Poppins" Margin="0, 2, 0, 0
                       "/>
@@ -36,10 +36,36 @@
                 <Image Source="arrow_right.png" HeightRequest="20" />
             </FlexLayout>
 
-            <ScrollView VerticalOptions="Center">
-                <Label Text="Test Label"></Label>
-            </ScrollView>
-            
+            <CollectionView x:Name="_workouts"
+                            SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.RowSpan="2"
+                                Text="{Binding Id}"
+                                HeightRequest="60"
+                                WidthRequest="60" />
+                            <Label Grid.Column="1"
+                                Text="{Binding Name}"
+                                FontAttributes="Bold" />
+                            <Label Grid.Row="1"
+                                Grid.Column="1"
+                                Text="{Binding Desc}"
+                                FontAttributes="Italic"
+                                VerticalOptions="End" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
         </StackLayout>
     </ContentView>
 

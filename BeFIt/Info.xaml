@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BeFIt.Info"
+             Title="Info">
+    <VerticalStackLayout>
+        <Label 
+            Text="Info"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            FontSize="25" />
+
+
+        <Label 
+            Text="Impressum"
+            VerticalOptions="Center" 
+            Margin="0,100,0,0"
+            WidthRequest="325"
+            FontSize="17.5" />
+
+        <Label 
+            Text="Fabian Bandini"
+            VerticalOptions="Center" 
+            Margin="0,25,0,0"
+            WidthRequest="325"
+            FontSize="15" />
+
+        <Label 
+            Text="Mätteliweg 15a"
+            VerticalOptions="Center" 
+            Margin="0,5,0,0"
+            WidthRequest="325"
+            FontSize="15" />
+
+        <Label 
+            Text="Rothrist"
+            VerticalOptions="Center" 
+            Margin="0,5,0,0"
+            WidthRequest="325"
+            FontSize="15" />
+
+        <Label 
+            Text="4852 Rothrist"
+            VerticalOptions="Center" 
+            Margin="0,5,0,0"
+            WidthRequest="325"
+            FontSize="15" />
+
+        <Label 
+            Text="Schweiz"
+            VerticalOptions="Center" 
+            Margin="0,5,0,0"
+            WidthRequest="325"
+            FontSize="15" />
+
+        <Label 
+            Text="Über die App"
+            VerticalOptions="Center" 
+            Margin="0,50,0,0"
+            WidthRequest="325"
+            FontSize="17.5" />
+
+        <Label 
+            Text="Build 0.0.1"
+            VerticalOptions="Center" 
+            Margin="0,25,0,0"
+            WidthRequest="325"
+            FontSize="15" />
+        
+        <Label 
+            Text="BeFit"
+            VerticalOptions="Center" 
+            Margin="0,5,0,0"
+            WidthRequest="325"
+            FontSize="15" />
+
+
+        <Label 
+            Text="Support:"
+            VerticalOptions="Center" 
+            Margin="0,25,0,0"
+            WidthRequest="325"
+            FontSize="15" />
+
+        <Label 
+            Text="fba132365@stud.gibb.ch"
+            VerticalOptions="Center" 
+            Margin="0,5,0,0"
+            WidthRequest="325"
+            TextColor="#A8BFFF"
+            FontSize="15" />
+
+        <Label 
+            Text="Last Updated at: 22.12.2022"
+            VerticalOptions="Center" 
+            Margin="0,200,0,0"
+            TextColor="Grey"
+            HorizontalTextAlignment="Center"
+            WidthRequest="325"
+            FontSize="12" />
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,18 +1,25 @@
-﻿namespace BeFIt;
+﻿using System.Collections.ObjectModel;
+
+namespace BeFIt;
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
 
-	public MainPage()
-	{
-		InitializeComponent();
+    private ObservableCollection<WorkoutModel> _workouts;
+   
+
+    public MainPage()
+    {
+        InitializeComponent();
+        this._workouts = new ObservableCollection<WorkoutModel>();
 
     }
 
-	private void OnCounterClicked(object sender, EventArgs e)
-	{
-		count++;
-	}
+    async void OnCounterClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new Profile());
+    }
+
+
 }
 

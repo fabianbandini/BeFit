@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BeFIt.Profile"
+             Title="Profile"
+             
+             BackgroundColor="#ffffff"
+             Background="#ffffff">
+    <VerticalStackLayout >
+        <FlexLayout Direction="Column" HeightRequest="150" AlignItems="Center" JustifyContent="SpaceBetween" Margin="0,45,0,0">
+            <Button WidthRequest="100" HeightRequest="100" BackgroundColor="#DCDCDC" CornerRadius="50"/>
+            <Label Text="Fabian Bandini" TextColor="#333" FontSize="20"/>
+        </FlexLayout>
+
+        <FlexLayout Direction="Column" HeightRequest="450" Margin="0, 45,0,0" AlignItems="Center" >
+
+
+            <Border StrokeShape="RoundRectangle 10" BackgroundColor="#333" Margin="0,5,0,0">
+                <FlexLayout HeightRequest="45" BackgroundColor="#DCDCDC" WidthRequest="350" AlignItems="Center" JustifyContent="SpaceBetween" >
+                    <Label Text="FAQ" TextColor="#333" FontSize="17" Margin="7.5, 0, 0, 0" />
+
+                    <ImageButton Source="more.png" HeightRequest="15" SemanticProperties.Description="Test" Margin="5,0,2.5,0" Clicked="OnFAQClicked"/>
+
+                </FlexLayout>
+
+            </Border>
+
+            <Border StrokeShape="RoundRectangle 10" BackgroundColor="#333" Margin="0,5,0,0">
+                <FlexLayout HeightRequest="45" BackgroundColor="#DCDCDC" WidthRequest="350" AlignItems="Center" JustifyContent="SpaceBetween">
+                    <Label Text="Infos" TextColor="#333" FontSize="17" Margin="7.5, 0, 0, 0" />
+                    <ImageButton Source="more.png" HeightRequest="15" SemanticProperties.Description="Test" Margin="5,0,2.5,0" Clicked="OnInfosClicked"/>
+                </FlexLayout>
+            </Border>
+
+            <Border StrokeShape="RoundRectangle 10" BackgroundColor="#333" Margin="0,5,0,0">
+                <FlexLayout HeightRequest="45" BackgroundColor="#DCDCDC" WidthRequest="350" AlignItems="Center" JustifyContent="SpaceBetween">
+                    <Label Text="Contact" TextColor="#333" FontSize="17" Margin="7.5, 0, 0, 0" />
+                    <ImageButton Source="more.png" HeightRequest="15" SemanticProperties.Description="Test" Margin="5,0,2.5,0" Clicked="OnContactClicked"/>
+                </FlexLayout>
+            </Border>
+        </FlexLayout>
+
+        <Label Text="Build 0.0.1 - Development" TextColor="#828282" FontSize="13" HorizontalTextAlignment="Center" Margin="0, 40, 0, 0"/>
+    </VerticalStackLayout>
+</ContentPage>
