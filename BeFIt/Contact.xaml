@@ -14,12 +14,12 @@
             <Entry Placeholder="E-Mail"
                    WidthRequest="325"
                    HeightRequest="45"
-                   Completed="OnEmailTextChanged" />
+                   TextChanged="OnEntryTextChanged" />
 
             <Entry Placeholder="Your Message"
                    WidthRequest="325"
                    HeightRequest="45"
-                   Completed="OnMessageTextCompleted"/>
+                   TextChanged="OnEntryTextChanged2"/>
         </FlexLayout>
 
         <FlexLayout HeightRequest="50" WidthRequest="325" Margin="0,10,0,0" Direction="Row" JustifyContent="SpaceBetween" AlignItems="Center">

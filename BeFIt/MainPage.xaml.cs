@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿
+using System.Collections.ObjectModel;
 
 namespace BeFIt;
 
@@ -7,7 +8,7 @@ public partial class MainPage : ContentPage
 
     public static ObservableCollection<WorkoutModel> meineListenElemente;
     public int _index = 0;
-   
+
 
     public MainPage()
     {
@@ -39,11 +40,20 @@ public partial class MainPage : ContentPage
 
     }
 
+    void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+        workoutsView.SelectedItem = e.CurrentSelection;
+    }
+
     async void OnCounterClicked(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new Profile());
     }
 
+    async void OnWorkoutClicked(Object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new Workout(workoutsView.SelectedItem));
+    }
 
 }
 

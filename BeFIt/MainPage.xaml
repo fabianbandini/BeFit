@@ -37,7 +37,8 @@
             </FlexLayout>
 
             <CollectionView x:Name="workoutsView"
-                            SelectionMode="Multiple" HeightRequest="350">
+                            SelectionMode="Single" HeightRequest="350"                 SelectionChanged="OnCollectionViewSelectionChanged">
+                
                 <CollectionView.ItemTemplate>
                     <DataTemplate >
                         <Border StrokeShape="RoundRectangle 10" Margin="0,7.5,0,0">
@@ -56,7 +57,7 @@
                                     Text="Sets"
                                     Margin="0,3.5,20,0"/>
 
-                                    <Image Source="play.png" HeightRequest="25" SemanticProperties.Description="Test" Margin="0,0,10,0"/>
+                                    <ImageButton Source="play.png" HeightRequest="25" SemanticProperties.Description="Test" Margin="0,0,10,0" Clicked="OnWorkoutClicked"/>
                                 </StackLayout>
                             </FlexLayout>
                         </Border>
