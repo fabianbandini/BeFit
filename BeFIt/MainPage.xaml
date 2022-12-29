@@ -36,32 +36,30 @@
                 <Image Source="arrow_right.png" HeightRequest="20" />
             </FlexLayout>
 
-            <CollectionView x:Name="_workouts"
-                            SelectionMode="Single">
+            <CollectionView x:Name="workoutsView"
+                            SelectionMode="Multiple" HeightRequest="350">
                 <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Grid Padding="10">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto" />
-                                <ColumnDefinition Width="Auto" />
-                            </Grid.ColumnDefinitions>
-                            <Label Grid.RowSpan="2"
-                                Text="{Binding Id}"
-                                HeightRequest="60"
-                                WidthRequest="60" />
-                            <Label Grid.Column="1"
+                    <DataTemplate >
+                        <Border StrokeShape="RoundRectangle 10" Margin="0,7.5,0,0">
+                            <FlexLayout HeightRequest="80" AlignItems="Center" JustifyContent="SpaceBetween">
+                                <Label 
                                 Text="{Binding Name}"
-                                FontAttributes="Bold" />
-                            <Label Grid.Row="1"
-                                Grid.Column="1"
-                                Text="{Binding Desc}"
-                                FontAttributes="Italic"
-                                VerticalOptions="End" />
-                        </Grid>
+                                FontAttributes="Bold"
+                                    Margin="10,0,0,0"
+                                />
+                                <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                                    <Label 
+                                    Text="{Binding Sets}"
+                                    Margin="0,3.5,5,0"/>
+
+                                    <Label 
+                                    Text="Sets"
+                                    Margin="0,3.5,20,0"/>
+
+                                    <Image Source="play.png" HeightRequest="25" SemanticProperties.Description="Test" Margin="0,0,10,0"/>
+                                </StackLayout>
+                            </FlexLayout>
+                        </Border>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>

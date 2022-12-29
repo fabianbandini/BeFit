@@ -13,11 +13,13 @@
         <FlexLayout HeightRequest="100" Margin="0,150,0,0" Direction="Column" JustifyContent="SpaceBetween" AlignItems="Center">
             <Entry Placeholder="E-Mail"
                    WidthRequest="325"
-                   HeightRequest="45"/>
+                   HeightRequest="45"
+                   Completed="OnEmailTextChanged" />
 
             <Entry Placeholder="Your Message"
                    WidthRequest="325"
-                   HeightRequest="45"/>
+                   HeightRequest="45"
+                   Completed="OnMessageTextCompleted"/>
         </FlexLayout>
 
         <FlexLayout HeightRequest="50" WidthRequest="325" Margin="0,10,0,0" Direction="Row" JustifyContent="SpaceBetween" AlignItems="Center">

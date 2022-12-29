@@ -5,13 +5,37 @@ namespace BeFIt;
 public partial class MainPage : ContentPage
 {
 
-    private ObservableCollection<WorkoutModel> _workouts;
+    public static ObservableCollection<WorkoutModel> meineListenElemente;
+    public int _index = 0;
    
 
     public MainPage()
     {
         InitializeComponent();
-        this._workouts = new ObservableCollection<WorkoutModel>();
+        meineListenElemente = new ObservableCollection<WorkoutModel>();
+        WorkoutModel a = new WorkoutModel()
+        {
+            Id = 1,
+            Name = "Pull",
+            Sets = 18,
+            Desc = "Description",
+        };
+
+        WorkoutModel b = new WorkoutModel()
+        {
+            Id = 1,
+            Name = "Push",
+            Sets = 20,
+            Desc = "Description",
+        };
+
+
+        meineListenElemente.Add(a);
+        meineListenElemente.Add(b);
+
+        workoutsView.SetBinding(ItemsView.ItemsSourceProperty, "WorkoutModel");
+        workoutsView.ItemsSource = meineListenElemente;
+        workoutsView.SelectedItem = a;
 
     }
 

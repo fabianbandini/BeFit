@@ -6,4 +6,14 @@ public partial class Contact : ContentPage
 	{
 		InitializeComponent();
 	}
+
+	public void OnEmailTextCompleted(object sender, System.EventArgs e)
+	{
+
+	}
+
+    public void OnMessageTextCompleted(object sender, System.EventArgs e)
+    {
+
+    }
 }
